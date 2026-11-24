@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_baby_bump_entry_list" model="ir.ui.view">
+        <field name="name">baby.bump.entry.list</field>
+        <field name="model">baby.bump.entry</field>
+        <field name="arch" type="xml">
+            <tree string="Bump Entries">
+                <field name="name"/>
+                <field name="profile_id"/>
+                <field name="date"/>
+                <field name="day"/>
+                <field name="time"/>
+                <field name="location_id"/>
+                <field name="bump_count"/>
+                <field name="observation" optional="show"/>
+                <field name="user_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_baby_bump_entry_form" model="ir.ui.view">
+        <field name="name">baby.bump.entry.form</field>
+        <field name="model">baby.bump.entry</field>
+        <field name="arch" type="xml">
+            <form string="Log Baby Bump">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Entry Reference"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Morning Movement #1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Pregnancy Information">
+                            <field name="profile_id"/>
+                            <field name="user_id"/>
+                        </group>
+                        <group string="Log Bump Details">
+                            <field name="date"/>
+                            <field name="day"/>
+                            <field name="time" placeholder="HH:MM (24-hour format, e.g. 14:30)"/>
+                            <field name="location_id"
+                                   options="{'no_quick_create': False, 'no_create_edit': False}"
+                                   placeholder="Select location or add new..."/>
+                            <field name="bump_count"/>
+                        </group>
+                    </group>
+                    <group string="Observations">
+                        <field name="observation"
+                               placeholder="Optional observations (e.g. kick strength, movement pattern, position)..."
+                               nolabel="1"/>
+                        <field name="note" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_baby_bump_entry_search" model="ir.ui.view">
+        <field name="name">baby.bump.entry.search</field>
+        <field name="model">baby.bump.entry</field>
+        <field name="arch" type="xml">
+            <search string="Search Bump Entries">
+                <field name="name"/>
+                <field name="profile_id"/>
+                <field name="location_id"/>
+                <field name="date"/>
+                <separator/>
+                <filter string="Today" name="today" domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Date" name="group_by_date" context="{'group_by': 'date'}"/>
+                    <filter string="Day" name="group_by_day" context="{'group_by': 'day'}"/>
+                    <filter string="Profile" name="group_by_profile" context="{'group_by': 'profile_id'}"/>
+                    <filter string="Location" name="group_by_location" context="{'group_by': 'location_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_baby_bump_entry" model="ir.actions.act_window">
+        <field name="name">Bump Entries</field>
+        <field name="res_model">baby.bump.entry</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_baby_bump_entry_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Log your first baby bump movement!
+            </p>
+        </field>
+    </record>
+
+</odoo>

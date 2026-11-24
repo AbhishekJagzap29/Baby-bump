@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_baby_location_admin,baby.location.admin,model_baby_bump_location,base.group_system,1,1,1,1
+access_baby_profile_admin,baby.profile.admin,model_baby_pregnancy_profile,base.group_system,1,1,1,1
+access_baby_entry_admin,baby.entry.admin,model_baby_bump_entry,base.group_system,1,1,1,1
+access_baby_dashboard_admin,baby.dashboard.admin,model_baby_dashboard,base.group_system,1,1,1,1

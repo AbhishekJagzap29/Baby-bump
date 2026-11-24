@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="location_upper_left" model="baby.bump.location">
+        <field name="name">Upper Left</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="location_middle_left" model="baby.bump.location">
+        <field name="name">Middle Left</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="location_lower_left" model="baby.bump.location">
+        <field name="name">Lower Left</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="location_upper_right" model="baby.bump.location">
+        <field name="name">Upper Right</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="location_middle_right" model="baby.bump.location">
+        <field name="name">Middle Right</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="location_lower_right" model="baby.bump.location">
+        <field name="name">Lower Right</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <record id="location_upper_belly" model="baby.bump.location">
+        <field name="name">Upper Belly</field>
+        <field name="sequence">70</field>
+    </record>
+
+    <record id="location_middle_belly" model="baby.bump.location">
+        <field name="name">Middle Belly</field>
+        <field name="sequence">80</field>
+    </record>
+
+    <record id="location_lower_belly" model="baby.bump.location">
+        <field name="name">Lower Belly</field>
+        <field name="sequence">90</field>
+    </record>
+
+    <record id="location_extreme_upper_left" model="baby.bump.location">
+        <field name="name">Extreme Upper Left</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <record id="location_extreme_middle_left" model="baby.bump.location">
+        <field name="name">Extreme Middle Left</field>
+        <field name="sequence">110</field>
+    </record>
+
+    <record id="location_extreme_lower_left" model="baby.bump.location">
+        <field name="name">Extreme Lower Left</field>
+        <field name="sequence">120</field>
+    </record>
+
+    <record id="location_extreme_upper_right" model="baby.bump.location">
+        <field name="name">Extreme Upper Right</field>
+        <field name="sequence">130</field>
+    </record>
+
+    <record id="location_extreme_middle_right" model="baby.bump.location">
+        <field name="name">Extreme Middle Right</field>
+        <field name="sequence">140</field>
+    </record>
+
+    <record id="location_extreme_lower_right" model="baby.bump.location">
+        <field name="name">Extreme Lower Right</field>
+        <field name="sequence">150</field>
+    </record>
+
+</odoo>

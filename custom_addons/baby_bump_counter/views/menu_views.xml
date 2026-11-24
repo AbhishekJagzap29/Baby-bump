@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_baby_bump_root"
+        name="Baby Bump Counter"
+        sequence="10"
+        groups="base.group_system"
+    />
+
+    <menuitem
+        id="menu_baby_bump_profiles"
+        name="Pregnancy Profiles"
+        parent="menu_baby_bump_root"
+        action="action_baby_pregnancy_profile"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_baby_bump_entries"
+        name="Bump Entries"
+        parent="menu_baby_bump_root"
+        action="action_baby_bump_entry"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_baby_bump_configuration"
+        name="Configuration"
+        parent="menu_baby_bump_root"
+        sequence="90"
+        groups="base.group_system"
+    />
+
+    <menuitem
+        id="menu_baby_bump_locations"
+        name="Bump Locations"
+        parent="menu_baby_bump_configuration"
+        action="action_baby_bump_location"
+        sequence="10"
+    />
+
+</odoo>
